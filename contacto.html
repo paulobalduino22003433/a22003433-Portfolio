@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+     <meta charset="utf-8">
+     <meta name="author" content="Paulo Balduino">
+      <meta name="description" content="Contactos de Paulo Balduino">
+     <meta name="keywords" content="HTML">
+  <title>Portfolio Paulo Balduino</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stylesjs.js">
+  <style>
+     footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  body.dark-mode {
+        background-color: #1c1c1c;
+        color: #f2f2f2;
+      }
+      
+    
+      .toggle-dark-mode {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+      }
+      
+  
+      body.dark-mode .toggle-dark-mode {
+        display: block;
+      }
+  
+   
+  footer a {
+    color: rgb(147, 187, 202);
+  }
+
+  img {
+  display: block;
+  margin: 350px auto 0;
+  margin-left: 400px;
+}
+
+.linkedin-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .linkedin-container img {
+    margin-right: 20px;
+  }
+
+  .linkedin-container a {
+    margin-top: 345px;
+  }
+
+  .whatsapp {
+      max-width: 600px;
+      font-size: 18px;
+      position: absolute; 
+      top: 320px;
+      left: 440px;
+      padding: 10px;
+      background-color: rgba(102, 102, 102, 0.5); 
+      
+    }
+
+    .gmail {
+      max-width: 600px;
+      font-size: 18px;
+      position: absolute; 
+      top: 320px;
+      left: 890px; 
+      padding: 10px;
+      background-color: rgba(102, 102, 102, 0.5); 
+      
+    }
+
+    .gmail:hover, .whatsapp:hover {
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobremim.html">Sobre mim</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contacto.html">Entre em contacto</a></li>
+      </ul>
+    </nav>
+    <button class="toggle-dark-mode" onclick="toggleDarkMode()"> Dark Mode</button>
+  </header>
+
+  <div class="linkedin-container">
+    <img src="images/miniwhatsapp.png" alt="whatsapp of Paulo Balduino">   
+    <p class="whatsapp">+351 926 342 572</p>
+    <img src="images/minigmail.png" alt="gmail of Paulo Balduino"> 
+    <p class="gmail">paulobalduino88@gmail.com</p>
+    <img src="images/minilinkedIN.png" alt="LinkedIN of Paulo Balduino">
+    <a href="https://www.linkedin.com/in/paulo-balduino-20151920b/">LinkedIn</a>
+  </div>
+</div>
+
+  <script>
+    function toggleDarkMode() {
+
+      document.body.classList.toggle('dark-mode');
+    }
+
+    document.getElementById('menu-btn').addEventListener('click', function() {
+
+      this.classList.toggle('active');
+
+ 
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+    
+  </script>
+  <footer>
+    <p>Entre em contacto comigo via: <a href="pauloEmail">paulobalduino88@gmail.com</a></p>
+  </footer>
+</body>
+</html>

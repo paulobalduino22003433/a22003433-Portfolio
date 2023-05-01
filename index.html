@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+     <meta charset="utf-8">
+     <meta name="author" content="Paulo Balduino">
+      <meta name="description" content="Portfolio de Paulo Balduino">
+     <meta name="keywords" content="HTML">
+  <title>Portfolio Paulo Balduino</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stylesjs.js">
+</head>
+<body>
+  <header>
+    <nav>
+      <div id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobremim.html">Sobre mim</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="contacto.html">Entre em contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <video autoplay loop muted id="bg-video">
+    <source src="videos/backgroundvideo_muted.mp4" type="video/mp4">
+  </video>
+  
+  <main>
+    <h1>Olá!Eu sou o Paulo</h1>
+  </main>
+
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', function() {
+      // Toggle 'active' class on menu button
+      this.classList.toggle('active');
+      
+      // Toggle 'active' class on nav links
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
